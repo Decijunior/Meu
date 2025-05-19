@@ -1,80 +1,158 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CNPJ Radar - Encontre Empresas em Segundos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f9fafb;
-      color: #111827;
+      font-family: 'Inter', sans-serif;
+      background: #f1f5f9;
+      color: #0f172a;
+      line-height: 1.6;
     }
     header {
-      background: #1e3a8a;
+      background: linear-gradient(to right, #0f172a, #1e3a8a);
       color: white;
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
+      margin: 0 0 10px;
     }
     header p {
       font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto;
     }
     section {
-      padding: 40px 20px;
-      max-width: 800px;
+      padding: 60px 20px;
+      max-width: 900px;
       margin: auto;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #1e3a8a;
+    }
+    ul.benefits {
+      padding-left: 20px;
+    }
+    .benefits li {
+      margin-bottom: 12px;
+      font-size: 1.1rem;
     }
     .button {
       display: inline-block;
       background: #1d4ed8;
       color: white;
-      padding: 15px 30px;
-      border-radius: 8px;
-      font-size: 1.2rem;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 1.1rem;
       text-decoration: none;
-      margin-top: 20px;
+      font-weight: 600;
+      transition: background 0.3s;
+      margin-top: 30px;
+      margin-right: 15px;
     }
-    .benefits li {
-      margin-bottom: 10px;
+    .button:hover {
+      background: #2563eb;
+    }
+    .whatsapp {
+      background: #25d366;
+    }
+    .whatsapp:hover {
+      background: #1ebe5d;
     }
     .testimonials {
-      background: #e0e7ff;
+      background: white;
+      border-left: 6px solid #1d4ed8;
       padding: 20px;
       border-radius: 8px;
-      margin-top: 40px;
+      margin-top: 50px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    .testimonials h3 {
+      margin-top: 0;
+      color: #1e3a8a;
     }
     .testimonials p {
+      margin: 10px 0;
       font-style: italic;
+    }
+    footer {
+      background: #1e293b;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+    }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin-top: 40px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      .button {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>CNPJ Radar</h1>
-    <p>Encontre empresas por cidade ou setor em segundos</p>
+    <p>Descubra empresas em segundos com filtros por cidade, setor e muito mais. Ideal para quem vende B2B!</p>
   </header>
-
   <section>
-    <h2>Descubra CNPJs de forma rápida e prática</h2>
+    <h2>Transforme sua prospecção com inteligência</h2>
     <ul class="benefits">
-      <li>Pesquise empresas por cidade, estado ou setor (CNAE)</li>
-      <li>Ideal para vendas B2B, agências, representantes e freelancers</li>
-      <li>Receba acesso imediato após pagamento</li>
-      <li>Sem mensalidades — acesso vitalício por apenas <strong>R$200</strong></li>
+      <li>Encontre empresas por cidade, estado, setor ou CNAE</li>
+      <li>Ferramenta ideal para vendas B2B, agências e freelancers</li>
+      <li>Receba acesso imediato ao programa via e-mail</li>
+      <li>Sem mensalidades: acesso vitalício por apenas <strong>R$200</strong></li>
+      <li>Simples de usar, 100% em português</li>
     </ul>
     <a class="button" href="https://hotmart.com/SEU-LINK-AQUI" target="_blank">Quero Acessar Agora</a>
+    <a class="button whatsapp" href="https://wa.me/541158533140?text=Oi%2C%20tenho%20interesse%20no%20CNPJ%20Radar%20e%20gostaria%20de%20mais%20informações." target="_blank">Falar no WhatsApp</a>
+
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Demonstração do CNPJ Radar" allowfullscreen></iframe>
+    </div>
 
     <div class="testimonials">
-      <h3>O que dizem nossos clientes:</h3>
-      <p>"Usei para encontrar clientes na minha região e fechei 3 contratos em 1 semana." – Carla, publicitária</p>
-      <p>"Economizei horas com o Radar. Já uso em todos os lançamentos da minha agência." – Jonas, gestor de tráfego</p>
+      <h3>O que dizem nossos clientes</h3>
+      <p>"Usei para encontrar clientes na minha região e fechei 3 contratos em 1 semana." — Carla, publicitária</p>
+      <p>"Economizei horas com o Radar. Já uso em todos os lançamentos da minha agência." — Jonas, gestor de tráfego</p>
+      <p>"Valeu cada centavo. Hoje meu time usa o CNPJ Radar todo dia pra encontrar leads." — Marcelo, representante comercial</p>
     </div>
   </section>
+  <footer>
+    © 2025 CNPJ Radar. Todos os direitos reservados.
+  </footer>
 </body>
 </html>
