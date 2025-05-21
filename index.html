@@ -3,158 +3,165 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CNPJ Radar - Encontre Empresas em Segundos</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>CNPJ Radar – Encontre Empresas por Segmento e Região</title>
   <style>
     body {
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f1f5f9;
-      color: #0f172a;
-      line-height: 1.6;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
     }
+
     header {
-      background: linear-gradient(to right, #0f172a, #1e3a8a);
+      background-color: #001f3f;
       color: white;
-      padding: 60px 20px;
       text-align: center;
+      padding: 50px 20px 30px;
     }
+
     header h1 {
-      font-size: 3rem;
-      margin: 0 0 10px;
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #ffc107;
     }
+
     header p {
-      font-size: 1.25rem;
-      max-width: 700px;
+      font-size: 1.2em;
       margin: 0 auto;
+      max-width: 600px;
     }
+
+    .cta {
+      background-color: #25d366;
+      color: white;
+      text-decoration: none;
+      padding: 15px 30px;
+      display: inline-block;
+      font-size: 1.2em;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
     section {
       padding: 60px 20px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
     }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #1e3a8a;
-    }
-    ul.benefits {
-      padding-left: 20px;
-    }
-    .benefits li {
-      margin-bottom: 12px;
-      font-size: 1.1rem;
-    }
-    .button {
-      display: inline-block;
-      background: #1d4ed8;
-      color: white;
-      padding: 14px 28px;
-      border-radius: 10px;
-      font-size: 1.1rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s;
-      margin-top: 30px;
-      margin-right: 15px;
-    }
-    .button:hover {
-      background: #2563eb;
-    }
-    .whatsapp {
-      background: #25d366;
-    }
-    .whatsapp:hover {
-      background: #1ebe5d;
-    }
-    .testimonials {
-      background: white;
-      border-left: 6px solid #1d4ed8;
-      padding: 20px;
-      border-radius: 8px;
-      margin-top: 50px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    }
-    .testimonials h3 {
-      margin-top: 0;
-      color: #1e3a8a;
-    }
-    .testimonials p {
-      margin: 10px 0;
-      font-style: italic;
-    }
-    footer {
-      background: #1e293b;
-      color: #cbd5e1;
+
+    section h2 {
       text-align: center;
-      padding: 30px 20px;
-      font-size: 0.9rem;
+      color: #001f3f;
+      font-size: 2em;
     }
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
+
+    section p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
       margin-top: 40px;
+    }
+
+    .feature {
+      flex: 1 1 280px;
+      background-color: white;
+      padding: 25px;
       border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
     }
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
+
+    .feature img {
+      width: 60px;
+      margin-bottom: 15px;
     }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-      .button {
-        width: 100%;
-        text-align: center;
-        padding: 12px;
-        margin-bottom: 10px;
-      }
+
+    .video-container {
+      margin: 40px auto;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+
+    footer {
+      background-color: #001f3f;
+      color: #ccc;
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>CNPJ Radar</h1>
-    <p>Descubra empresas em segundos com filtros por cidade, setor e muito mais. Ideal para quem vende B2B!</p>
+    <p>Automatize a prospecção de empresas por segmento e região. Obtenha contatos direto da Receita Federal.</p>
+    <a class="cta" href="https://wa.me/541158533140?text=Olá%2C+tenho+interesse+no+CNPJ+Radar%21+Gostaria+de+saber+como+funciona." target="_blank">Fale agora pelo WhatsApp</a>
   </header>
+
   <section>
-    <h2>Transforme sua prospecção com inteligência</h2>
-    <ul class="benefits">
-      <li>Encontre contatos de empresas por cidade, estado ou setor</li>
-      <li>Ferramenta ideal para vendas B2B, agências e freelancers</li>
-      <li>Receba acesso imediato ao programa via e-mail</li>
-      <li>Sem mensalidades: acesso vitalício por apenas <strong>R$297</strong></li>
-    </ul>
-    <a class="button" href="https://pay.kirvano.com/dae0ffb2-5920-4e5c-adda-0f9cc3959e80" target="_blank">Quero Acessar Agora</a>
-    <a class="button whatsapp" href="https://wa.me/541158533140?text=Oi%2C%20tenho%20interesse%20no%20CNPJ%20Radar%20e%20gostaria%20de%20mais%20informações." target="_blank">Falar no WhatsApp</a>
+    <h2>O que é o CNPJ Radar?</h2>
+    <p>
+      O CNPJ Radar é uma ferramenta inteligente que permite localizar e extrair dados de empresas registradas na Receita Federal com base no segmento de atuação e localização geográfica. Ideal para quem deseja aumentar sua base de clientes ou buscar parcerias comerciais de forma prática, rápida e estratégica.
+    </p>
+  </section>
 
-      <div class="video-container">
-    <video width="100%" controls style="border-radius: 12px;">
-      <source src="cnpj-radar.mp4" type="video/mp4">
-      Seu navegador não suporta vídeos HTML5.
-    </video>
-  </div>
-
-    <div class="testimonials">
-      <h3>O que dizem nossos clientes</h3>
-      <p>"Usei para encontrar clientes na minha região e fechei 3 contratos em 1 semana." — Carla, publicitária</p>
-      <p>"Economizei horas com o Radar. Já uso em todos os lançamentos da minha agência." — Jonas, gestor de tráfego</p>
-      <p>"Valeu cada centavo. Hoje meu time usa o CNPJ Radar todo dia pra encontrar leads." — Marcelo, representante comercial</p>
+  <section>
+    <h2>Por que usar o CNPJ Radar?</h2>
+    <div class="features">
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/601/601682.png" alt="Ícone segmentação">
+        <h3>Segmentação Precisa</h3>
+        <p>Encontre exatamente o tipo de empresa que você deseja, filtrando por setor e localização.</p>
+      </div>
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/2331/2331932.png" alt="Ícone lista">
+        <h3>Dados Atualizados</h3>
+        <p>As informações são baseadas nos registros oficiais da Receita Federal.</p>
+      </div>
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Ícone automação">
+        <h3>Automatização</h3>
+        <p>Economize horas de trabalho com nosso sistema que gera listas automaticamente.</p>
+      </div>
     </div>
   </section>
+
+  <section>
+    <h2>Como Funciona?</h2>
+    <p>
+      Você informa o setor e a região de interesse. O sistema busca automaticamente os CNPJs cadastrados e gera uma lista com nome da empresa, endereço e contato (quando disponível). Tudo isso em poucos minutos.
+    </p>
+  </section>
+
+  <section>
+    <h2>Veja na prática</h2>
+    <div class="video-container">
+      <video width="100%" controls style="border-radius: 12px;">
+        <source src="cnpj-radar.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos HTML5.
+      </video>
+    </div>
+  </section>
+
+  <section>
+    <h2>Adquira agora</h2>
+    <p>
+      Acesso vitalício ao sistema por apenas <strong>R$297</strong>. Sem mensalidade, sem taxas extras. Receba o programa em minutos no seu e-mail ou WhatsApp.
+    </p>
+    <a class="cta" href="https://wa.me/541158533140?text=Olá%2C+tenho+interesse+no+CNPJ+Radar%21+Gostaria+de+comprar+agora." target="_blank">Quero comprar agora</a>
+  </section>
+
   <footer>
-    © 2025 CNPJ Radar. Todos os direitos reservados.
+    &copy; 2025 CNPJ Radar. Todos os direitos reservados.
   </footer>
+
 </body>
 </html>
