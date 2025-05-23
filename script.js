@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             
             const plan = this.getAttribute('data-plan');
-            let checkoutUrl = 'https://pay.kirvano.com/dae0ffb2-5920-4e5c-adda-0f9cc3959e80';
+            let checkoutUrl = '';
             
             // Aqui seriam configuradas as URLs reais da Kirvano
             if (plan === 'monthly') {
