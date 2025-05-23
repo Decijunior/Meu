@@ -1,85 +1,216 @@
-// JavaScript para a página de vendas CNPJ Radar
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNPJ Radar - Gere contatos de empresas de forma automática</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="CNPJ Radar Logo" class="logo">
+        </div>
+    </header>
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Configuração de botões de compra para Kirvano
-    const buyButtons = document.querySelectorAll('.buy-button');
-    
-    buyButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
+    <section class="hero">
+        <div class="hero-content">
+            <h2>CNPJ Radar: O poder dos contatos empresariais em uma ferramenta</h2>
+            <p>Gere listas automáticas de contatos B2B por segmento e região para potencializar suas vendas</p>
             
-            const plan = this.getAttribute('data-plan');
-            let checkoutUrl = '';
+            <div class="video-container">
+                <!-- Espaço reservado para vídeo -->
+                <div class="video-placeholder">
+                    <i class="fas fa-play-circle"></i>
+                    <p>Vídeo explicativo</p>
+                </div>
+            </div>
             
-            // Aqui seriam configuradas as URLs reais da Kirvano
-            if (plan === 'monthly') {
-                // URL para plano mensal (12x de R$ 997)
-                checkoutUrl = 'https://pay.kirvano.com/checkout/plano-mensal';
-                console.log('Redirecionando para checkout do plano mensal');
-            } else if (plan === 'onetime') {
-                // URL para pagamento único (R$ 797)
-                checkoutUrl = 'https://pay.kirvano.com/checkout/pagamento-unico';
-                console.log('Redirecionando para checkout de pagamento único');
-            }
+            <p class="tagline">Automatize a geração de contatos B2B em alguns cliques e multiplique suas oportunidades de negócio em 2025</p>
             
-            // Redirecionamento para a página de checkout (comentado para desenvolvimento)
-            // window.location.href = checkoutUrl;
-            
-            // Para desenvolvimento, mostrar alerta
-            alert('Redirecionando para página de pagamento Kirvano: ' + plan);
-        });
-    });
-    
-    // Navegação suave para links internos
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 100,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-    
-    // Animação para elementos ao fazer scroll
-    const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.feature-card, .automation-card, .testimonial, .pricing-card, .faq-item');
+            <a href="#pricing" class="cta-button">GERAR CONTATOS AGORA</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Mais contatos em menos tempo</h2>
         
-        elements.forEach(element => {
-            const elementPosition = element.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-filter"></i>
+                </div>
+                <h3>SEGMENTAÇÃO PRECISA</h3>
+                <p>Filtre contatos por indústria, tamanho da empresa, localização e mais para encontrar exatamente o que você precisa</p>
+            </div>
             
-            if (elementPosition < windowHeight - 100) {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-            }
-        });
-    };
-    
-    // Inicializar estilos para animação
-    const elementsToAnimate = document.querySelectorAll('.feature-card, .automation-card, .testimonial, .pricing-card, .faq-item');
-    elementsToAnimate.forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(20px)';
-        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    });
-    
-    // Executar animação ao carregar e ao fazer scroll
-    window.addEventListener('load', animateOnScroll);
-    window.addEventListener('scroll', animateOnScroll);
-    
-    // Placeholder para vídeo
-    const videoPlaceholder = document.querySelector('.video-placeholder');
-    if (videoPlaceholder) {
-        videoPlaceholder.addEventListener('click', function() {
-            // Aqui poderia ser implementada a lógica para carregar o vídeo real
-            alert('Espaço reservado para vídeo explicativo');
-        });
-    }
-});
+            <div class="feature-card">
+                <i class="fas fa-database"></i>
+                <h3>DADOS ATUALIZADOS</h3>
+                <p>Acesse informações atualizadas de empresas com dados de contato verificados e atualizados regularmente</p>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fas fa-download"></i>
+                <h3>EXPORTAÇÃO ILIMITADA</h3>
+                <p>Exporte suas listas em múltiplos formatos compatíveis com suas ferramentas de CRM e marketing</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="automation">
+        <h2>Seu tempo é muito valioso, pare de perder tempo buscando contatos manualmente</h2>
+        
+        <div class="automation-grid">
+            <div class="automation-card">
+                <i class="fas fa-search"></i>
+                <h3>BUSCA INTELIGENTE</h3>
+                <p>Encontre empresas de acordo com critérios específicos com nossa tecnologia de busca avançada</p>
+            </div>
+            
+            <div class="automation-card">
+                <i class="fas fa-list"></i>
+                <h3>LISTAS PERSONALIZADAS</h3>
+                <p>Crie listas personalizadas de acordo com suas necessidades específicas de prospecção</p>
+            </div>
+            
+            <div class="automation-card">
+                <i class="fas fa-sync"></i>
+                <h3>ATUALIZAÇÃO AUTOMÁTICA</h3>
+                <p>As listas são atualizadas automaticamente para manter as informações sempre em dia</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>O que dizem nossos clientes</h2>
+        
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                <p>"Graças ao CNPJ Radar aumentamos nossa carteira de clientes em 45% em apenas 3 meses. A qualidade dos contatos é excelente."</p>
+                <div class="testimonial-author">
+                    <p>Carlos Mendes</p>
+                    <p>Diretor Comercial, TechSolutions</p>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <p>"A segmentação por indústria nos permitiu focar nossos esforços comerciais exatamente onde precisávamos. Resultados incríveis."</p>
+                <div class="testimonial-author">
+                    <p>Ana Martins</p>
+                    <p>CEO, Marketing Pro</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <h2>Invista no seu sucesso comercial</h2>
+        
+        <div class="pricing-card">
+            <h3>Acesso Premium</h3>
+            <div class="price-options">
+                <div class="price-option">
+                    <h4>Plano Mensal</h4>
+                    <p class="price">12x de R$ 997</p>
+                    <a href="#" class="buy-button" data-plan="monthly">COMPRAR AGORA</a>
+                </div>
+                
+                <div class="price-option highlight">
+                    <h4>Pagamento Único</h4>
+                    <p class="price">R$ 797 à vista</p>
+                    <p class="discount">20% de desconto!</p>
+                    <a href="#" class="buy-button" data-plan="onetime">COMPRAR AGORA</a>
+                </div>
+            </div>
+            
+            <div class="features-list">
+                <div class="feature-item">
+                    <i class="fas fa-check"></i>
+                    <p>Acesso ilimitado à base de dados</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check"></i>
+                    <p>Exportação em múltiplos formatos</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check"></i>
+                    <p>Atualizações automáticas</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check"></i>
+                    <p>Suporte prioritário</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check"></i>
+                    <p>Segmentação avançada</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="guarantee">
+        <div class="guarantee-content">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Garantia de satisfação de 30 dias</h3>
+            <p>Se não estiver satisfeito com os resultados, devolvemos seu dinheiro. Sem perguntas.</p>
+        </div>
+    </section>
+
+    <section class="faq">
+        <h2>Perguntas Frequentes</h2>
+        
+        <div class="faq-item">
+            <h3>Como funciona o sistema de listas automáticas?</h3>
+            <p>Nosso sistema utiliza tecnologia avançada para buscar e filtrar empresas de acordo com os critérios que você definir. Você pode segmentar por indústria, tamanho, localização e muitos outros parâmetros para encontrar exatamente os contatos que precisa.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>Quais informações as listas incluem?</h3>
+            <p>As listas incluem nome da empresa, endereço, telefone, e-mail, site, setor, tamanho da empresa e nomes de contatos-chave quando disponíveis.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>Com que frequência os dados são atualizados?</h3>
+            <p>Nossa base de dados é atualizada semanalmente para garantir que você sempre tenha acesso às informações mais recentes e precisas.</p>
+        </div>
+    </section>
+
+    <section class="cta-final">
+        <h2>Pronto para potencializar suas vendas B2B?</h2>
+        <p>Pare de perder tempo buscando contatos manualmente. Automatize e multiplique seus resultados.</p>
+        <a href="#pricing" class="cta-button">GERAR CONTATOS AGORA</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="CNPJ Radar Logo" class="logo-small">
+            </div>
+            
+            <div class="footer-links">
+                <a href="#">Termos e Condições</a>
+                <a href="#">Política de Privacidade</a>
+            </div>
+            
+            <div class="footer-contact">
+                <p>Tem perguntas? Entre em contato</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 CNPJ Radar. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="whatsapp-button">
+        <a href="https://wa.me/541126389616" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span>Dúvidas? Fale conosco</span>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
