@@ -9,16 +9,16 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             
             const plan = this.getAttribute('data-plan');
-            let checkoutUrl = '';
+            let checkoutUrl = 'https://pay.kirvano.com/dae0ffb2-5920-4e5c-adda-0f9cc3959e80';
             
             // Aqui seriam configuradas as URLs reais da Kirvano
             if (plan === 'monthly') {
                 // URL para plano mensal (12x de R$ 997)
-                checkoutUrl = 'https://pay.kirvano.com/checkout/plano-mensal';
+                checkoutUrl = 'https://pay.kirvano.com/dae0ffb2-5920-4e5c-adda-0f9cc3959e80';
                 console.log('Redirecionando para checkout do plano mensal');
             } else if (plan === 'onetime') {
                 // URL para pagamento único (R$ 797)
-                checkoutUrl = 'https://pay.kirvano.com/checkout/pagamento-unico';
+                checkoutUrl = 'https://pay.kirvano.com/dae0ffb2-5920-4e5c-adda-0f9cc3959e80';
                 console.log('Redirecionando para checkout de pagamento único');
             }
             
