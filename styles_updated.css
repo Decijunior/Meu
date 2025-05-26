@@ -168,8 +168,8 @@ section:nth-child(odd) {
 }
 
 .video-placeholder {
-  width: 300px;               /* ajuste a largura como quiser */
-  aspect-ratio: 9 / 16;       /* define proporção vertical */
+  width: 300px;
+  aspect-ratio: 9 / 16;
   margin: 20px auto;
   border-radius: 16px;
   overflow: hidden;
